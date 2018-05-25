@@ -21,22 +21,3 @@ You can access the application at `localhost:3000`
 
 - Starting Node server
 `node server/sever.js path_to_file`
-
-
-### Text editor settings
-Please make sure your text editor is configured properly before you start contributing.
-Use below settings for sublime text editor.
-```
-"tab_size": 2,
-"translate_tabs_to_spaces": true,
-"trim_trailing_white_space_on_save": true,
-"ensure_newline_at_eof_on_save": true,
-```
-Use below settings for visual studio Code
-```
-"editor.tabSize": 2,
-"editor.insertSpaces": true,
-"editor.trimAutoWhitespace": true,
-"files.insertFinalNewline": true
-
-```
