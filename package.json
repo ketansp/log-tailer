@@ -1,0 +1,23 @@
+{
+  "name": "log-tailer",
+  "version": "1.0.0",
+  "description": "an equivalent of tail -f ",
+  "main": "server/server.js",
+  "dependencies": {
+    "socket.io": "2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ketansp/log-tailer.git"
+  },
+  "author": "Ketan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ketansp/log-tailer/issues"
+  },
+  "homepage": "https://github.com/ketansp/log-tailer#readme"
+}

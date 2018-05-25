@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <script src='/socket.io/socket.io.js'></script>
+    <script>
+        var socket = io();
+
+        //when socket connection is established
+        socket.on('connectionEstablished', function(data) {
+          printLine('Socket connection established with the server');
+          if(data && data['lines']){
+            data['lines'].forEach(line => {
+              printLine(line)
+            });
+          }
+        });
+
+        //When we receive updates from server
+        socket.on('logUpdate', function(data) {
+          if(data && data['lines']){
+            data['lines'].forEach(line => {
+              printLine(line)
+            });
+          }
+        });
+
+        socket.on('error', console.error.bind(console));
+        socket.on('message', console.log.bind(console));
+
+        function printLine(message){
+          var text = document.createTextNode(message),
+            el = document.createElement('p'),
+            logs = document.getElementById('logs');
+          el.appendChild(text);
+          logs.appendChild(el);
+        }
+    </script>
+  </head>
+  <body>
+      <ul id='logs'></ul>
+  </body>
+</html>
