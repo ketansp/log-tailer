@@ -34,7 +34,7 @@ io.on('connection', function(socket) {
   lastReadLineNumber = linesInFile.length;
 
   //emit data to connection
-  socket.emit('connectionEstablished', { lines : linesToSendBack});
+  socket.emit('connectionEstablished', { lines : linesToSendBack.reverse()});
 });
 
 //check if file has changed by comparing last modified date
