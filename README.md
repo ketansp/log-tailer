@@ -20,7 +20,7 @@ nvm alias default 8.9.0
 You can access the application at `localhost:3000`
 
 - Starting Node server
-`node server/sever.js`
+`node server/sever.js path_to_file`
 
 
 ### Text editor settings
