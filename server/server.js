@@ -53,7 +53,7 @@ function readFileForChanges() {
     lastModifiedDateInMillis = newlyReadLastModifiedDateInMillies;
     lastReadLineNumber = linesInFile.length;
 
-    io.emit('logUpdate', { lines : linesToSendBack });
+    io.emit('logUpdate', { lines : linesToSendBack.reverse() });
   }
 }
 
